@@ -1,0 +1,67 @@
+@import '@/uni_modules/uni-scss/variables.scss';
+
+// **************************全局样式属性**************************
+// 主标题大小
+$autowx-title-size: 20px;
+$autowx-subtitle-size: 15px;
+$autowx-title-interval: 5px;
+$autowx-subtitle-interval: 20px;
+
+// 按钮
+$autowx-button-fontSize: 20px;
+$autowx-button-height: 50px;
+$autowx-button-backgroundColor: #619ac3;
+$autowx-button-borderRadius: 10px;
+$autowx-button-padding: 10px;
+$autowx-button-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+
+
+// ***************************全局样式****************************
+// 首页进入页
+.autowx-comingSoon {
+	display: flex;
+	padding: 0px 10px;
+	height: 100vh;
+	background-image: linear-gradient(to right bottom, #eea2a4, #619ac3);
+	flex-direction: column;
+}
+// 主标题-黑色
+.autowx-title-black {
+	font-size: $autowx-title-size;
+	color: black;
+}
+// 主标题-白色
+.autowx-title-white {
+	font-size: $autowx-title-size;
+	color: white;
+	margin-bottom: $autowx-title-interval;
+}
+// 副标题-白色
+.autowx-subtitle-white {
+	font-size: $autowx-subtitle-size;
+	color: white;
+	margin-bottom: $autowx-subtitle-interval;
+}
+
+// 标准按钮
+.autowx-button {
+	height: $autowx-button-height;
+	border-radius: $autowx-button-borderRadius;
+	background-color: $autowx-button-backgroundColor;
+	padding: 0px $autowx-button-padding;
+	font-size: $autowx-button-fontSize;
+	box-shadow: $autowx-button-shadow;
+	display: flex;
+	align-items: center;
+}
+// 标准按钮-点击样式
+.autowx-button-click {
+	height: $autowx-button-height;
+	border-radius: $autowx-button-borderRadius;
+	background-color: rgba(0, 0, 0, 0.1);
+	padding: 0px $autowx-button-padding;
+	font-size: $autowx-button-fontSize;
+	box-shadow: $autowx-button-shadow;
+	display: flex;
+	align-items: center;
+}

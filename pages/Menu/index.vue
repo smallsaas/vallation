@@ -7,7 +7,7 @@
 
 		<!-- 菜单栏 列表样式-->
 		<view>
-			<view class="menu-container" v-for="(menuItem,menuIndex) of menu" :key="index">
+			<view class="menu-container" v-for="(menuItem,menuIndex) of menu" :key="menuIndex">
 				<view class="menu-item" @click="goToPage(item.path)" hover-class="menu-item-click" v-for="(item,index) of menuItem">
 					{{item.title}}
 				</view>

@@ -18,12 +18,19 @@
 			"path": "pages/DynamicApplets/ListApps",
 			"style": {
 				"navigationBarTitleText": "动态小程序",
-				"navigationStyle": "custom"
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
+			"path": "pages/appPage/appPage",
+			"style": {
+				"navigationBarTitleText": "动态页面",
+				"navigationBarTextStyle": "black"
 			}
 		}
 	],
 	"globalStyle": {
-		"navigationBarTextStyle": "white",
+		"navigationBarTextStyle": "white" ,
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8",

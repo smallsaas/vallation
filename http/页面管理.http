@@ -1,0 +1,105 @@
+@endpoint = https://house.cloud.smallsaas.cn
+
+
+### 获取页面信息
+GET {{endpoint}}/form?id=77777775
+
+### 提交页面信息
+POST {{endpoint}}/form/77777775
+Content-Type: application/json
+
+{  
+    "version": "1",
+    "name": "allPageList",
+    "title": "个推页面",
+    "pageStyle": {
+    },
+    "loadApi": "",
+    "response": {
+        "data": "data"
+    },
+    "request": {
+    },
+    "moduleContainer": {
+        "height": "",
+        "background": "#ffffff"
+    },
+    "modules": [
+        {
+            "type": "autolist",
+            "name": "",
+            "key": "a1a5efed-1372-4cfd-8087-91722f1023ba",
+            "container": {
+            }
+        }
+    ],
+    "moduleData": {
+        "a1a5efed-1372-4cfd-8087-91722f1023ba": {
+            "loadApi": "/form/allPages",
+            
+            "multiFilter": [
+                {
+                    "name": "", 
+                    "api": "/api/u/asset/community",
+                    "binding": {
+                        "community": "name",
+                        "id": "value"
+                    },
+                    "response": {
+                        "list": "data"
+                    },
+                    "field": "communityId"
+                }
+
+            ],
+
+            "newItemState": {
+                "id": "communityId"
+            },
+
+            "multiItemNavigation": [
+                "/my/seniorConfig/index?id=5555763&buildingId=id",
+                "DELETE /api/u/house/operations/userBuildingManage?id",
+            ],
+            "multiNavigationModule": {
+                "options": [
+					{
+						"option":"default",
+						"label":"预览"
+					},
+                    {
+                        "option": "outline",
+                        "label": "编辑"
+                    },
+                    {
+                        "option": "warning",
+                        "label": "删除"
+                    }
+                ]
+            },
+
+            "itemLayout": "wrap",
+
+            "newItemModule": {
+                "name": "addUserBuildingBtn",
+            },
+            "newItemNavigation": "/my/seniorConfig/index?id=5555761&communityId",
+
+            "response": {
+                "list": "records"
+            },
+            "request": {
+                "default": {
+                },
+                "ps": "pageSize=30",
+                "pn": "pageNum"
+            },
+            "itemModule": {
+                "name": "allPageItem"
+            }
+        }
+    }
+}
+
+
+

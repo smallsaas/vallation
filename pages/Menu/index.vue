@@ -7,8 +7,8 @@
 
 		<!-- 菜单栏 列表样式-->
 		<view>
-			<view class="menu-container" v-for="(menuItem,menuIndex) of menu" :key="index">
-				<view class="menu-item" @click="goToPage(item.path)" hover-class="menu-item-click" v-for="(item,index) of menuItem">
+			<view class="menu-container" v-for="(menuItem,menuIndex) of menu" :key="menuIndex">
+			<view class="menu-item" @click="goToPage(item.path)" hover-class="menu-item-click" v-for="(item,index) of menuItem">
 					{{item.title}}
 				</view>
 			</view>
@@ -50,8 +50,8 @@
 					},
 					{
 						title: '动态页面',
-						path: ''
-					},],
+						path: '/pages/appPage/appPage'
+					}],
 
 					[{
 						title: '标准页面入库',

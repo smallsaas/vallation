@@ -1,0 +1,19 @@
+.van_field_label {
+    color: rgba(80, 80, 80, 1);
+    font-weight: bold;
+    margin-bottom: 10rpx;
+		font-size: 24rpx;
+}
+
+.van_field_input_block {
+   >van-field {
+     >van-cell {
+         >view:first-child {
+             flex-direction: column;
+             >view:first-child {
+                 max-width: unset!important;
+             }
+         }
+     }  
+   }
+}

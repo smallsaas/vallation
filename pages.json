@@ -20,6 +20,13 @@
 				"navigationBarTitleText": "动态小程序",
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path": "pages/appPage/appPage",
+			"style": {
+				"navigationBarTitleText": "动态页面",
+				"navigationStyle": "custom"
+			}
 		}
 	],
 	"globalStyle": {

@@ -12,6 +12,7 @@ import {timeCache,cache, cacheMap, reload, login, getUserProfile, orderStatus, u
 
 Vue.config.productionTip = false
 Vue.prototype.$cache = cache //可设置过期时间
+Vue.prototype.$cacheMap = cacheMap
 Vue.prototype.$config = globalConfig
 Vue.prototype.$api = api
 

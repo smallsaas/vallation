@@ -4,11 +4,10 @@
 
 <script>
 	export default {
-		
 		data() {
-			console.log(this.$config);
+			console.log('this.$config.formHost',this.$config.formHost)
 			return {
-				api: this.$config.formHost  + '?id=77777775',
+				api: `${this.$config.formHost}?id=77777775`,
 			}
 				
 		},

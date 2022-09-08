@@ -1,19 +1,10 @@
 <template>
 	<view class="content">
 		<view class="title" >
-			{{_get("code")}}
+			{{_get("title")}}
 		</view>
-		<view class="item" style="margin-top: 8px;" >
-			<image :src="tickIcom" class="svg-css"/>
-			<text>{{_get("floors")}} 层</text>
-		</view>
-		<view class="item" >
-			<image :src="tickIcom" class="svg-css"/>
-			<text>{{_get("units")}} 单元</text>
-		</view>
-		<view class="item" >
-			<image :src="tickIcom" class="svg-css"/>
-			<text>第{{_get("issue")}}期</text>
+		<view class="describe">
+			{{item.pageDescrip==null?"":item.pageDescrip}}
 		</view>
 	</view>
 </template>
@@ -44,7 +35,8 @@
 				}else{
 					return this.bgList[this.index]
 				}
-			}
+			},
+			
 		},
 		mounted(){
 			// console.log('this.item = ', this.item)
@@ -53,40 +45,49 @@
 </script>
 <style lang="less" scoped>
 	.content {
-		// height: 52rpx;
+		height: 200rpx;
 		width: 170rpx;
 		display: flex;
 		flex-direction: column;
-		align-items: center;
+		align-items: flex-start;
 		border: 4rpx solid #cdcdcd;
 		border-radius: 8rpx;
 		margin: 20rpx 20rpx;
 		padding: 7px;
 		
 		.title {
-			min-width: 75rpx;
+			width: 150rpx;
+			// max-width: 170rpx;
+			// min-width: 75rpx;
+			height: 80rpx;
 			font-weight: bold;
 			font-size: 30rpx;
 			padding: 6rpx 10rpx;
-			background: #2C88D9;
-			text-align: center;
-			border-radius: 18px;
-			color: #ffffff;
+			text-align: left;
+			word-break: break-all;
+			
+			 overflow: hidden; 
+			  text-overflow: ellipsis;
+			  display: -webkit-box; 
+			  -webkit-box-orient: vertical;
+			  -webkit-line-clamp: 2; 
 		}
 		
-		.item {
+		.describe {
 			width: 150rpx;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			font-size: 28rpx;
-			color: #293845;
-			font-weight: bold;
+			height: 90rpx;
+			font-size: 24rpx;
+			line-height: 24rpx;
+			padding: 6rpx 10rpx;
+			text-align: left;
+			word-break: break-all;
 			
-			.svg-css{
-				width: 25px;
-				height: 25px;
-			}
+			overflow: hidden;
+			 text-overflow: ellipsis;
+			 display: -webkit-box; 
+			 -webkit-box-orient: vertical;
+			 -webkit-line-clamp: 4; 
+			
 		}
 	}
 </style>

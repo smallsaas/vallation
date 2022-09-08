@@ -14,7 +14,7 @@ Content-Type: application/json
     "title": "个推页面",
     "pageStyle": {
     },
-    "loadApi": "",
+    "loadApi": "/form/allPages",
     "response": {
         "data": "data"
     },
@@ -37,35 +37,20 @@ Content-Type: application/json
         "a1a5efed-1372-4cfd-8087-91722f1023ba": {
             "loadApi": "/form/allPages",
             
-            "multiFilter": [
-                {
-                    "name": "", 
-                    "api": "/api/u/asset/community",
-                    "binding": {
-                        "community": "name",
-                        "id": "value"
-                    },
-                    "response": {
-                        "list": "data"
-                    },
-                    "field": "communityId"
-                }
-
-            ],
-
             "newItemState": {
-                "id": "communityId"
+                "count": "count"
             },
-
             "multiItemNavigation": [
-                "/my/seniorConfig/index?id=5555763&buildingId=id",
-                "DELETE /api/u/house/operations/userBuildingManage?id",
+                "",
+                "/appPage/updatePage?count",
+                "",
             ],
             "multiNavigationModule": {
                 "options": [
 					{
 						"option":"default",
-						"label":"预览"
+						"label":"预览",
+                        "spacer":"32"
 					},
                     {
                         "option": "outline",
@@ -83,7 +68,7 @@ Content-Type: application/json
             "newItemModule": {
                 "name": "addUserBuildingBtn",
             },
-            "newItemNavigation": "/my/seniorConfig/index?id=5555761&communityId",
+            "newItemNavigation": "/DynamicApplets/ListApps",
 
             "response": {
                 "list": "records"

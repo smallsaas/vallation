@@ -29,6 +29,13 @@
 			}
 		},
 		{
+			"path": "pages/appPage/preview",
+			"style": {
+				"navigationBarTitleText": "页面预览",
+				"navigationBarTextStyle": "black"
+			}
+		},
+		{
 			"path": "pages/appPage/updatePage",
 			"style": {
 				"navigationBarTitleText": "编辑页面",

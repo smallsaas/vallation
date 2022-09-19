@@ -368,14 +368,7 @@
 					@refresh="refresh"
 				/>
 				
-				<all-page-item
-				v-if="getListItemKey() === 'allPageItem'"
-				:item="{
-				  ...item,
-				  ...getComponentBindData(item),
-				}"
-				@refresh="refresh"
-				/>
+				
 				
 				
 				
@@ -388,6 +381,29 @@
 					@refresh="refresh"
 					@dynamicListPopupCencalClose="onCencalClosePopup"
 				/>
+				
+				
+				
+			<!-- ======================vallation============================ -->
+			<all-page-item
+			v-if="getListItemKey() === 'allPageItem'"
+			:item="{
+			  ...item,
+			  ...getComponentBindData(item),
+			}"
+			@refresh="refresh"
+			/>
+			
+			<router-item
+			v-if="getListItemKey() === 'routerItem'"
+			:item="{
+			  ...item,
+			  ...getComponentBindData(item),
+			}"
+			@refresh="refresh"
+			/>
+			
+			
 				
 				
 			  </view>
@@ -502,6 +518,7 @@ import AgentBriefInfoItem from '@/components/dynamic-list/listItem/5G/AgentBrief
 
 // =========================autowx=============================================
 import allPageItem from '@/components/dynamic-list/listItem/autowx/allPageItem.vue'
+import routerItem from "@/components/dynamic-list/listItem/autowx/routerItem.vue"
 
 export default {
   components: {
@@ -555,6 +572,7 @@ export default {
 		
 		// ============auto==============
 		allPageItem,
+		routerItem,
   },
   props: {
     config: {

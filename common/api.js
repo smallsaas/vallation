@@ -18,5 +18,10 @@ export const api = {
 	getAllPage(params){
 		const url = `${globalConfig.endpoint}/form/allPages`
 		return request('GET', url, params)
+	},
+	
+	getForm(id){
+		const url = `${globalConfig.endpoint}/form?id=${id}`
+		return request('GET', url)
 	}
 }

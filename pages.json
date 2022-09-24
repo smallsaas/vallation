@@ -42,7 +42,17 @@
 				"navigationBarTextStyle": "black"
 			}
 		}
-	],
+	    ,{
+            "path" : "pages/standardComponent/standardComponent",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "标准组件",
+                "navigationBarTextStyle": "black"
+                
+            }
+            
+        }
+    ],
 	"globalStyle": {
 		"navigationBarTextStyle": "white" ,
 		"navigationBarTitleText": "uni-app",

@@ -7,7 +7,7 @@
 		name: 'preview',
 		data(){
 			return {
-				api: 'https://house.cloud.smallsaas.cn/dev/auto/preview/current/form',
+				api: 'https://static.smallsaas.cn/dev/auto/preview/current/form',
 			}
 		},
 

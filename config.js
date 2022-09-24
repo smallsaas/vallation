@@ -32,9 +32,9 @@ export const globalConfig = isDev?{
 export const globalConfig = isDev?{
 	cachePolicy: 1, //頁面緩存的時間 默認緩存一天 以天爲單位 爲0不緩存
 	clearPageCache: true,//重啓時是否清除頁面緩存
-	formHost: "http://app1.console.smallsaas.cn:8001/form",
-	dataHost: "http://app1.console.smallsaas.cn:8001/data",
-	endpoint: "http://app1.console.smallsaas.cn:8001",
+	formHost: "https://app1.console.smallsaas.cn:8001/form",
+	dataHost: "https://app1.console.smallsaas.cn:8001/data",
+	endpoint: "https://app1.console.smallsaas.cn:8001",
 	tokenStorageKey:"token"
 }:{
 	formHost: "",

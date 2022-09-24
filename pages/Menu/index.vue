@@ -1,5 +1,5 @@
 <template>
-	<view class="autowx-comingSoon">
+	<view class="autowx-comingSoon" style="height: 100%;">
 		<!-- 带返回按钮的顶部标题栏 -->
 		<view class="menu-titleBar">
 			<image class="goback" @click="goback" src="../../static/svg/goBack.svg"></image>
@@ -55,7 +55,7 @@
 					{
 						title: '页面预览',
 						path: '/pages/appPage/preview',
-						bgColor:'red'
+						bgColor:'#5d9690'
 					},
 					],
 
@@ -65,7 +65,7 @@
 					},
 					{
 						title: '标准组件入库',
-						path: ''
+						path: '/pages/standardComponent/standardComponent'
 					},
 					{
 						title: '标准属性入库',

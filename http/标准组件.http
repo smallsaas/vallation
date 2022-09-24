@@ -1,0 +1,90 @@
+@endpoint = https://house.cloud.smallsaas.cn
+
+
+### 获取页面信息
+GET {{endpoint}}/form?id=77777779
+
+### 提交页面信息
+POST {{endpoint}}/form/77777779
+Content-Type: application/json
+
+{  
+    "version": "1",
+    "name": "standardComponent",
+    "title": "标准组件",
+    "pageStyle": {
+    },
+    "loadApi": "/form/allPages",
+    "response": {
+        "data": "data"
+    },
+    "request": {
+    },
+    "moduleContainer": {
+        "height": "",
+        "background": "#ffffff"
+    },
+    "modules": [
+        {
+            "type": "autolist",
+            "name": "",
+            "key": "a1a5efed-1372-4cfd-8087-91722f1023ba",
+            "container": {
+            }
+        }
+    ],
+    "moduleData": {
+        "a1a5efed-1372-4cfd-8087-91722f1023ba": {
+            "loadApi": "/dev/auto/component",
+            
+            "newItemState": {
+                "count": "count"
+            },
+            "multiItemNavigation": [
+                "",
+                "/appPage/updatePage?count",
+                "",
+            ],
+            "multiNavigationModule": {
+                
+                "options": [
+                    {
+						"option":"default",
+						"label":"添加",
+                        
+					},
+					{
+						"option":"default",
+						"label":"属性管理",
+                        
+					},
+                    {
+                        "option": "outline",
+                        "label": "编辑",
+                        "spacer":"32"
+                    },
+                    {
+                        "option": "warning",
+                        "label": "移除"
+                    }
+                ]
+            },
+
+            "response": {
+                "list": "records"
+            },
+            "request": {
+                "default": {
+                },
+                "ps": "pageSize=30",
+                "pn": "pageNum"
+            },
+            "itemModule": {
+                "name": "standardComponentItem"
+            }
+        }
+    }
+}
+
+
+

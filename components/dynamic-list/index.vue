@@ -403,6 +403,16 @@
 			@refresh="refresh"
 			/>
 			
+			<standard-component-item 
+			v-if="getListItemKey() === 'standardComponentItem'"
+			:item="{
+			  ...item,
+			  ...getComponentBindData(item),
+			}"
+			@refresh="refresh"
+			/>
+
+			
 			
 				
 				
@@ -519,6 +529,7 @@ import AgentBriefInfoItem from '@/components/dynamic-list/listItem/5G/AgentBrief
 // =========================autowx=============================================
 import allPageItem from '@/components/dynamic-list/listItem/autowx/allPageItem.vue'
 import routerItem from "@/components/dynamic-list/listItem/autowx/routerItem.vue"
+import standardComponentItem from "@/components/dynamic-list/listItem/autowx/standardComponentItem"
 
 export default {
   components: {
@@ -573,6 +584,7 @@ export default {
 		// ============auto==============
 		allPageItem,
 		routerItem,
+		standardComponentItem,
   },
   props: {
     config: {

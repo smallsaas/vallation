@@ -13,6 +13,7 @@
 			<add5-g-application-but 
 				v-if="getNewItemModuleKey() === 'add5GApplicationBut'"
 			/>
+			<add-component-btn v-if="getNewItemModuleKey()==='addComponentBtn'"/>
 		</view>
 		
 		<uni-popup ref="btnBoxPopup">
@@ -38,6 +39,11 @@
 	//==========5G =========
 	import add5GApplicationBut from './btns/add5GApplicationBut.vue'
 	import { objToApiParams } from '../utils/compxTools.js'
+	
+	// =============vallation===============
+	import addComponentBtn from "./btns/addComponentBtn.vue"
+	
+	
 	export default {
 		name: 'btnBox',
 		components:{
@@ -45,7 +51,10 @@
 			createBtn,
 			addUserBuildingBtn,
 			addUserHouseTypeBtn,
-			add5GApplicationBut
+			add5GApplicationBut,
+			
+			// =============vallation===============
+			addComponentBtn
 		},
 		data(){
 			return {

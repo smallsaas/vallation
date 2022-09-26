@@ -38,7 +38,7 @@ Content-Type: application/json
             "loadApi": "/dev/auto/component",
             
             "newItemState": {
-                "count": "count"
+                "componentName": "componentName"
             },
             "multiItemNavigation": [
                 "",
@@ -69,6 +69,11 @@ Content-Type: application/json
                     }
                 ]
             },
+
+            "newItemModule": {
+                "name": "addComponentBtn",
+            },
+            "newItemNavigation": "/standardComponent/createComponent?componentName",
 
             "response": {
                 "list": "records"

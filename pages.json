@@ -52,6 +52,16 @@
             }
             
         }
+		,{
+		    "path" : "pages/standardComponent/createComponent",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "标准组件入库",
+		        "navigationBarTextStyle": "black"
+		        
+		    }
+		    
+		}
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "white" ,

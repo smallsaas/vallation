@@ -61,6 +61,16 @@
 		        
 		    }
 		    
+		},
+		{
+		    "path" : "pages/componentsPreview/index",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "标准组件展示",
+		        "navigationBarTextStyle": "black"
+		        
+		    }
+		    
 		}
     ],
 	"globalStyle": {

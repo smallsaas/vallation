@@ -70,7 +70,13 @@
 					{
 						title: '标准属性入库',
 						path: ''
-					}]
+					}],
+					[
+						{
+							title: '标准组件展示',
+							path: '/pages/componentsPreview/index'
+						}
+					]
 				]
 			}
 		},

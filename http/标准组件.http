@@ -72,6 +72,9 @@ Content-Type: application/json
 
             "newItemModule": {
                 "name": "addComponentBtn",
+				"container": {
+				    "margin-bottom": "50rpx",
+				}
             },
             "newItemNavigation": "/standardComponent/createComponent?componentName",
 

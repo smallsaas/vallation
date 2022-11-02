@@ -16,20 +16,32 @@
 	.contain{
 		margin: 50rpx auto;
 		width: 80%;
+		
+		
 	}
 	.add-component-box{
 		width: 100%;
-		border-radius: 10rpx;
+		height: 60rpx;
+		line-height: 60rpx;
+		margin-bottom: 60rpx;
+		border-radius: 30rpx;
 		border: 1rpx solid #c7c3fb;
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
+		align-items: center;
 		color: #6558f5;
+		font-size: 30rpx;
+		text-align: center;
+		
 	}
 	.puls-icon{
-		width: 20rpx;
-		height: 20rpx;
-		border: 50%;
+		width: 40rpx;
+		height: 40rpx;
+		line-height: 40rpx;
+		border-radius: 50%;
+		text-align: center;
+		background-color: #6558f5;
 		color: #fff;
 	}
 </style>

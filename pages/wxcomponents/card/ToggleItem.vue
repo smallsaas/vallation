@@ -1,7 +1,7 @@
 <template>
 	<view class="base">
 		<view class="title">
-			<text>{{title}}</text>
+			<text>{{item.title}}</text>
 		</view>
 
 		<switch :checked="status" @change="clickEvent">
@@ -13,9 +13,7 @@
 <script>
 	export default {
 		props: {
-			title: String,
-			navon: String,
-			navoff: String
+			item: Object // title,navon,navoff
 		},
 		data() {
 			return {
@@ -37,7 +35,14 @@
 			
 			// 点击触发事件
 			clickEvent(element) {
-				console.log('element',element.detail)
+				const that = this
+				if(element.detail.value) {
+					// 开启
+					that.requestApi(that.item.navon)
+				} else {
+					// 关闭
+					that.requestApi(that.item.navoff)
+				}
 			}
 		}
 	}
@@ -50,8 +55,9 @@
 		justify-content: space-between;
 		background-color: #fff;
 		border-radius: 12px;
-		padding: 0px 18px;
+		padding: 0px 16px 0px 18px;
 		align-items: center;
+		margin-bottom: 6px;
 
 		.title {
 			font-size: 18px;

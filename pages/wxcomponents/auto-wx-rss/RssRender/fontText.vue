@@ -1,16 +1,29 @@
 <template>
-	<view class="title" >
-		<p class="textarea-content" :style="[styles]" >
-			{{text}}
-		</p>
-	</view>
+	
+	<block>
+		<view class="title" v-if="type === 'title'"  :key="index">
+			<p :class="[`textarea-content  ${cssName || ''}`]" :style="[styles || {}]">
+				{{text}}
+			</p>
+		</view>
+		
+		<view class="title" v-if="type === 'css'" >
+			<p class="textarea-content" :style="[styles || {}]" >
+				{{text}}
+			</p>
+		</view>
+	</block>
+	
+	
 </template>
 
 <script>
 	export default {
 		props:{
+			type: String,
 			text: String,
-			styles: Object
+			styles: Object,
+			cssName: Object
 		},
 		data(){
 			return {

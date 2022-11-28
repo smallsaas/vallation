@@ -10,14 +10,14 @@
 		<view class="flex_row" v-if="layoutType === '=-'">
 			<view class="flex_col" style="flex: 1;">
 				<view style="text-align: left;">
-					<image class="small_img" :style="[{'height': `${bigImgHeight/2}px`}]" :src="echoImage(imgList[0].propDefaultValue)" mode="center" @click="previewImage(imgList, 0)" />
+					<image class="small_img" :style="[{'height': `${bigImgHeight/2}px`}]" :src="echoImage(imgList[0].propDefaultValue)" mode="aspectFill" @click="previewImage(imgList, 0)" />
 				</view>
 				<view>
-					<image class="small_img" :style="[{'height': `${bigImgHeight/2}px`}]" :src="echoImage(imgList[1].propDefaultValue)" mode="center" @click="previewImage(imgList, 1)"/>
+					<image class="small_img" :style="[{'height': `${bigImgHeight/2}px`}]" :src="echoImage(imgList[1].propDefaultValue)" mode="aspectFill" @click="previewImage(imgList, 1)"/>
 				</view>
 			</view>
 			<view style="flex: 1;">
-				<image id="type_one_right" class="big_img"  :style="[{'height': `${bigImgHeight}px`}]":src="echoImage(imgList[2].propDefaultValue)" mode="center" 
+				<image id="type_one_right" class="big_img"  :style="[{'height': `${bigImgHeight}px`}]":src="echoImage(imgList[2].propDefaultValue)" mode="aspectFill" 
 					@click="previewImage(imgList, 2)" @load="(e)=>imageLoad(e, 2)"/>
 			</view>
 		</view>
@@ -25,16 +25,16 @@
 		<!-- type2 -->
 		<view class="flex_row" v-if="layoutType === '-='">
 			<view style="flex: 1;">
-				<image id="type_two_left" class="big_img" :style="[{'height': `${bigImgHeight}px`}]" :src="echoImage(imgList[0].propDefaultValue)" mode="center" 
+				<image id="type_two_left" class="big_img" :style="[{'height': `${bigImgHeight}px`}]" :src="echoImage(imgList[0].propDefaultValue)" mode="aspectFill" 
 					@click="previewImage(imgList, 0)"  @load="(e)=>imageLoad(e, 0)"/>
 			</view>
 			<view class="flex_col" style="flex: 1;">
 				<view>
-					<image class="small_img" :style="[{'height': `${bigImgHeight/2}px`}]" :src="echoImage(imgList[1].propDefaultValue)" mode="center" 
+					<image class="small_img" :style="[{'height': `${bigImgHeight/2}px`}]" :src="echoImage(imgList[1].propDefaultValue)" mode="aspectFill" 
 						@click="previewImage(imgList, 1)"/>
 				</view>
 				<view>
-					<image class="small_img" :style="[{'height': `${bigImgHeight/2}px`}]" :src="echoImage(imgList[2].propDefaultValue)" mode="center" 
+					<image class="small_img" :style="[{'height': `${bigImgHeight/2}px`}]" :src="echoImage(imgList[2].propDefaultValue)" mode="aspectFill" 
 						@click="previewImage(imgList, 2)"/>
 				</view>
 			</view>
@@ -43,7 +43,7 @@
 		<!-- type3 -->
 		<view class="flex_row" v-if="layoutType === '---'">
 			<view :style="[{'flex': colItem, 'margin-right': `${colIndex === cols.length-1 ? '' : '3px'}`}]" v-for="(colItem, colIndex) in cols">
-				<image class="item-image" :style="[{'height': `${flexRowHeight}px`}]" :src="echoImage(imgList[colIndex].propDefaultValue)" v-if="imgList[colIndex]"  mode="center" @click="previewImage(imgList, colIndex)"/>
+				<image class="item-image" :style="[{'height': `${flexRowHeight}px`}]" :src="echoImage(imgList[colIndex].propDefaultValue)" v-if="imgList[colIndex]"  mode="aspectFill" @click="previewImage(imgList, colIndex)"/>
 			</view>
 		</view>
 		
@@ -58,7 +58,7 @@
 		<view class="grid_content" :style="{'grid-template-columns': `repeat(${cols}, 1fr)`}" v-if="layoutType === '#'">
 			<image 
 				v-for="(picItem, picIndex) in imgList" :key="picIndex"
-				:id="'grid_'+picIndex" class="item-image" :src="echoImage(picItem.propDefaultValue)" mode="center"
+				:id="'grid_'+picIndex" class="item-image" :src="echoImage(picItem.propDefaultValue)" mode="aspectFill"
 				:style="{height: picItem.containerHeight + 'px'}"  @load="(e)=>imageItemLoad(e, picIndex)" 
 				@click="previewImage(imgList, picIndex)" />
 			

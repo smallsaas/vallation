@@ -1,0 +1,7 @@
+{
+  "name": "auto-wx-vr",
+  "version": "1.0.0",
+  "description": "全景VR组件",
+  "main": "main.js",
+  "dependencies": {}
+}

@@ -3,7 +3,12 @@
     <VRPano
       :panolist="panolist"
       :defaultEntryid="0"
+      :width="375"
+      :height="500"
     />
+    <view>
+      内容区域
+    </view>
   </view>
 </template>
 

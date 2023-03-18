@@ -5,5 +5,8 @@ npm-debug.log*
 yarn-error.log
 .hbuilderx
 unpackage/
+.DS_Store
+package-lock.json
+pages/.DS_Store
 
 

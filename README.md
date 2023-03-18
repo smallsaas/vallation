@@ -51,7 +51,7 @@ APPID：wx386c038238531f87
       return {
         panolist: [
           {
-			name: '全景图片唯一名称',
+            name: '全景图片唯一名称',
             src: 全景图片网址''
           }
         ]
@@ -66,5 +66,7 @@ VRPano 组件参数如下：
 | --------   | -----:  | :----:  | :----:   | :----:   | 
 | panolist  | Array  |   是     | 全景图片信息集合 | [] | 
 |defaultEntryid | Number | 否 |进入的全景id（按panolist中的顺序） | 0  |
+| width | Number | 否 | 画布宽度(px) | 默认为屏幕宽度 |
+| height | Number | 否 | 画布高度(px) | 默认为屏幕高度 |
 | autoRotation  |  Boolean   |   否   | 是否开启自动旋转| true |
 | fov        |    Number    |  否  | 摄像机视场角，范围[1-120] | 120 |

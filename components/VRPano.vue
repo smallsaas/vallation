@@ -3,15 +3,26 @@
     <pano 
       :panolist="panolist" 
       :autoinit="false"
-    >
-      
-    </pano>
+    />
   </view>
 </template>
 <script>
   const wxPano = requirePlugin('wxPano')
+  const sysInfo = uni.getSystemInfoSync() || {}
   export default {
     props: {
+      panolist: {
+        type: Array,
+        default: () => []
+      },
+      width: {
+        type: Number,
+        default: sysInfo.windowWidth || 375
+      },
+      height: {
+        type: Number,
+        default: sysInfo.windowHeight || 812
+      },
       autoRotation: {
         type: Boolean,
         default: true
@@ -23,12 +34,7 @@
       defaultEntryid: {
         type: Number,
         default: 0
-      },
-      panolist: {
-        type: Array,
-        default: () => []
       }
-
     },
     data () {
       return {}
@@ -48,11 +54,14 @@
 
       wxPano.onReady = () => {
         uni.hideLoading()
+        wxPano.setCanvasWidth(this.width)
+        wxPano.setCanvasHeight(this.height)
         // 默认开启自动旋转
         if (this.autoRotation) {
           wxPano && wxPano.enableAutoRotation(1)
         }
         wxPano.setCameraFov(this.fov)
+        console.log('******', wxPano)
         // wxPano.initDeviceOrientation()
         // wxPano.enableCheckObjectsIntersect()
       }

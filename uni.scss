@@ -24,6 +24,8 @@ $autowx-button-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 	height: 100vh;
 	background-image: linear-gradient(to right bottom, #eea2a4, #619ac3);
 	flex-direction: column;
+	position: relative;
+	overflow: hidden;
 }
 // 主标题-黑色
 .autowx-title-black {

@@ -59,12 +59,12 @@
 </template>
 
 <script>
-	import ToggleItem from '../wxcomponents/card/ToggleItem.vue'
-	import BoxItem from '../wxcomponents/card/BoxItem.vue'
-	import CardItem from '../wxcomponents/card/CardItem.vue'
-	import MagicItem from '../wxcomponents/card/MagicItem.vue'
-	import RowItem from '../wxcomponents/card/RowItem.vue'
-	import SubtitleCardItem from '../wxcomponents/card/SubtitleCardItem.vue'
+	import ToggleItem from '../wxcomponents/auto-wx-card/ToggleItem.vue'
+	import BoxItem from '../wxcomponents/auto-wx-card/BoxItem.vue'
+	import CardItem from '../wxcomponents/auto-wx-card/CardItem.vue'
+	import MagicItem from '../wxcomponents/auto-wx-card/MagicItem.vue'
+	import RowItem from '../wxcomponents/auto-wx-card/RowItem.vue'
+	import SubtitleCardItem from '../wxcomponents/auto-wx-card/SubtitleCardItem.vue'
 
 	export default {
 		components: {
